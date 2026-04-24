@@ -5,6 +5,12 @@
   "description": "Thème Firefox monochrome épuré avec basculement automatique clair/foncé.",
   "author": "Hyko",
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "octo-theme@hyko"
+    }
+  },
+
   "icons": {
     "48": "icons/icon.svg"
   },
