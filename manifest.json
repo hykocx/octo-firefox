@@ -1,0 +1,67 @@
+{
+  "manifest_version": 2,
+  "name": "Octo Theme",
+  "version": "1.0.0",
+  "description": "Thème Firefox monochrome épuré avec basculement automatique clair/foncé.",
+  "author": "Hyko",
+
+  "icons": {
+    "48": "icons/icon.svg"
+  },
+
+  "theme": {
+    "colors": {
+      "frame":                      "#e0e0e0",
+      "tab_selected":               "#ffffff",
+      "tab_background_text":        "#666666",
+      "tab_text":                   "#1a1a1a",
+      "tab_line":                   "#ffffff",
+      "toolbar":                    "#f5f5f5",
+      "toolbar_text":               "#1a1a1a",
+      "toolbar_field":              "#ffffff",
+      "toolbar_field_text":         "#1a1a1a",
+      "toolbar_field_border":       "#cccccc",
+      "toolbar_field_border_focus": "#555555",
+      "icons":                      "#555555",
+      "icons_attention":            "#333333",
+      "button_background_hover":    "#e8e8e8",
+      "button_background_active":   "#d0d0d0",
+      "popup":                      "#ffffff",
+      "popup_text":                 "#1a1a1a",
+      "popup_border":               "#cccccc",
+      "popup_highlight":            "#e8e8e8",
+      "popup_highlight_text":       "#1a1a1a",
+      "sidebar":                    "#f5f5f5",
+      "sidebar_text":               "#1a1a1a",
+      "sidebar_border":             "#cccccc"
+    }
+  },
+
+  "dark_theme": {
+    "colors": {
+      "frame":                      "#000000",
+      "tab_selected":               "#111111",
+      "tab_background_text":        "#888888",
+      "tab_text":                   "#e6e6e6",
+      "tab_line":                   "#000000",
+      "toolbar":                    "#111111",
+      "toolbar_text":               "#cccccc",
+      "toolbar_field":              "#000000",
+      "toolbar_field_text":         "#e6e6e6",
+      "toolbar_field_border":       "#252525",
+      "toolbar_field_border_focus": "#888888",
+      "icons":                      "#999999",
+      "icons_attention":            "#cccccc",
+      "button_background_hover":    "#252525",
+      "button_background_active":   "#333333",
+      "popup":                      "#1a1a1a",
+      "popup_text":                 "#e6e6e6",
+      "popup_border":               "#333333",
+      "popup_highlight":            "#2a2a2a",
+      "popup_highlight_text":       "#cccccc",
+      "sidebar":                    "#111111",
+      "sidebar_text":               "#cccccc",
+      "sidebar_border":             "#252525"
+    }
+  }
+}
