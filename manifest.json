@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Octo Theme",
   "version": "1.0.1",
-  "description": "Thème Firefox monochrome épuré avec basculement automatique clair/foncé.",
+  "description": "Thème Firefox épuré avec basculement automatique clair/foncé.",
   "author": "Hyko",
 
   "browser_specific_settings": {
