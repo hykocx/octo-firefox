@@ -1,16 +1,19 @@
 # Octo Firefox
 
-Thème Firefox monochrome épuré avec basculement automatique clair/foncé.
+Thème Firefox épuré avec basculement automatique clair/foncé.
+
+![Thème clair](assets/preview.svg)
+![Thème dark](assets/preview-dark.svg)
 
 ## Ce que ça fait
 
-Ce thème applique une palette strictement monochrome à l'interface de Firefox, barres d'outils, onglets, popups et sidebar. Le thème s'adapte automatiquement au mode système : clair le jour, foncé la nuit.
+Ce thème applique une palette monochrome à l'interface de Firefox, barres d'outils, onglets, popups et sidebar. Le thème s'adapte automatiquement au mode système : clair le jour, foncé la nuit.
 
 ## Installation
 
-1. Télécharge le fichier `.xpi` depuis les [releases](../../releases).
-2. Dans Firefox, ouvre `about:addons`.
-3. Clique sur l'icône ⚙️ → **Installer un module depuis un fichier...** et sélectionne le fichier téléchargé.
+### Depuis Firefox Add-ons
+
+Installe directement depuis [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/octo-theme/).
 
 ## Développement
 
