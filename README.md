@@ -1,4 +1,4 @@
-# Octo Theme
+# Octo Firefox
 
 Thème Firefox monochrome épuré avec basculement automatique clair/foncé.
 
