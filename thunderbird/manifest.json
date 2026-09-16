@@ -9,7 +9,7 @@
     "gecko": {
       "id": "octo-theme@hyko",
       "strict_min_version": "128.0",
-      "strict_max_version": "160.*"
+      "strict_max_version": "158.*"
     }
   },
 
