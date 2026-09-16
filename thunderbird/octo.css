@@ -1,0 +1,185 @@
+/* Octo Theme pour Thunderbird.
+ * Injectée par theme_experiment dans chaque fenêtre qui accepte les thèmes.
+ * light-dark() suit le basculement entre "theme" et "dark_theme". */
+
+:root:root {
+  /* Échelle de gris neutre, sans la teinte bleutée d'origine */
+  --color-gray-05: #f5f5f5;
+  --color-gray-10: #f0f0f0;
+  --color-gray-20: #e0e0e0;
+  --color-gray-30: #cccccc;
+  --color-gray-40: #999999;
+  --color-gray-50: #666666;
+  --color-gray-60: #333333;
+  --color-gray-70: #252525;
+  --color-gray-80: #1a1a1a;
+  --color-gray-90: #111111;
+
+  /* Les tons "ink" sont violets : on les ramène à des gris neutres */
+  --color-ink-10: #f5f5f5;
+  --color-ink-20: #e8e8e8;
+  --color-ink-30: #cccccc;
+  --color-ink-40: #999999;
+  --color-ink-50: #666666;
+  --color-ink-60: #333333;
+  --color-ink-70: #252525;
+  --color-ink-80: #1a1a1a;
+  --color-ink-90: #111111;
+
+  /* Mise en page : les volets centraux et le contenu partagent le même fond */
+  --layout-background-0: light-dark(#ffffff, #000000);
+  --layout-background-1: light-dark(#ffffff, #000000);
+  --layout-background-2: light-dark(#f5f5f5, #111111);
+  --layout-background-3: light-dark(#e8e8e8, #1a1a1a);
+  --layout-background-4: light-dark(#d0d0d0, #252525);
+
+  --layout-color-0: light-dark(#000000, #ffffff);
+  --layout-color-1: light-dark(#1a1a1a, #e6e6e6);
+  --layout-color-2: light-dark(#555555, #999999);
+  --layout-color-3: light-dark(#888888, #666666);
+
+  --layout-border-0: light-dark(#e0e0e0, #1a1a1a);
+  --layout-border-1: light-dark(#cccccc, #252525);
+  --layout-border-2: light-dark(#999999, #333333);
+
+  /* Accent bleu (Octo VS Code) */
+  --link-color: light-dark(#0366d6, #58a6ff);
+  --link-color-hover: var(--link-color);
+  --link-color-active: var(--link-color);
+  --link-color-visited: var(--link-color);
+  --button-link-text-color: var(--link-color);
+  --button-link-active-text-color: var(--link-color);
+  --new-folder-color: var(--link-color);
+
+  /* Boutons et arrondis */
+  --button-border-radius: 4px;
+  --listbox-border-radius: 4px;
+  --button-border-color: light-dark(#d0d0d0, #252525);
+  --button-hover-background-color: light-dark(#d0d0d0, #252525);
+  --button-active-background-color: light-dark(#c0c0c0, #333333);
+
+  /* Liste des dossiers : sélection par le fond, sans cadre */
+  --list-container-border-selected: transparent;
+  --list-container-border-selected-current: transparent;
+  --list-container-border-hover: transparent;
+  --list-container-border-selected-focused: transparent;
+  --list-container-border-selected-current-focused: transparent;
+  --list-container-background-selected: light-dark(#e8e8e8, #1a1a1a);
+  --list-container-background-selected-current: light-dark(#e8e8e8, #1a1a1a);
+  --list-container-background-hover: light-dark(rgba(0, 0, 0, 0.04), rgba(255, 255, 255, 0.04));
+  --list-container-background-selected-focused: color-mix(in srgb, var(--selected-item-color) 15%, transparent);
+  --list-container-background-selected-current-focused: color-mix(in srgb, var(--selected-item-color) 25%, transparent);
+
+  /* Liste des messages : cartes sans cadre */
+  --tree-view-bg: var(--layout-background-0);
+  --tree-card-border: transparent;
+  --tree-card-border-hover: transparent;
+  --tree-card-border-focus: transparent;
+  --tree-card-border-selected: transparent;
+  --tree-card-border-selected-unfocused: transparent;
+
+  /* Calendrier */
+  --viewBackground: var(--layout-background-0);
+  --viewCalendarHeaderBackground: transparent;
+  --viewTodayBackground: var(--viewBackground);
+  --viewTodayOffBackground: var(--viewOffTimeBackground);
+  --viewWeekendBackground: light-dark(#fafafa, #0a0a0a);
+  --viewTodayWeekendBackground: var(--viewWeekendBackground);
+  --viewMonthOtherBackground: light-dark(#fafafa, #0a0a0a);
+  --viewMonthDayOtherBackground: light-dark(#fafafa, #0a0a0a);
+  --viewOffTimeBackground: light-dark(#fafafa, #0a0a0a);
+  --viewMonthDayOffLabelBackground: var(--viewWeekendBackground);
+  --viewMonthWeekLabelBackground: light-dark(#e8e8e8, #1a1a1a);
+  --viewDayBoxSelectedBackground: color-mix(in srgb, var(--selected-item-color) 10%, var(--viewBackground));
+  --viewDayBoxOffSelectedBackground: var(--viewDayBoxSelectedBackground);
+  --viewDayBoxOtherSelectedBackground: var(--viewDayBoxSelectedBackground);
+  --viewHeaderSelectedBackground: color-mix(in srgb, var(--selected-item-color) 10%, var(--viewBackground));
+  --viewDayLabelSelectedBackground: var(--selected-item-color);
+  --viewDragboxBackground: var(--selected-item-color);
+  --viewDropshadowBackground: var(--selected-item-color);
+
+  --calendar-view-toggle-background: var(--layout-background-3);
+  --calendar-view-toggle-hover-background: var(--layout-background-4);
+  --calendar-view-toggle-active-background: var(--layout-background-4);
+  --calendar-view-toggle-selected-background: var(--layout-background-0);
+  --calendar-view-toggle-selected-hover-background: var(--layout-background-2);
+}
+
+/* Séparateur fin entre les messages en vue cartes */
+:root:root [is="tree-view-table-body"] > .card-layout > td {
+  box-shadow: inset 0 -1px 0 var(--layout-border-0);
+}
+
+/* Liste des calendriers : sélection discrète, pleine couleur seulement au focus */
+:root:root #calendar-list > li.selected {
+  border-color: transparent;
+  background: light-dark(#e8e8e8, #1a1a1a);
+  color: inherit;
+}
+
+:root:root #calendar-list:focus-within > li.selected {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--selected-item-color) 25%, transparent);
+  color: inherit;
+}
+
+/* Mini-calendrier : sélecteur renforcé pour passer devant la variante lwt-tree */
+:root:root:root calendar-minimonth {
+  --mmMainBackground: transparent;
+  --mmMainBorderColor: transparent;
+  --mmMainBorderRadius: 4px;
+  --mmBoxBackground: light-dark(#e8e8e8, #1a1a1a);
+  --mmBoxBorderColor: transparent;
+  --mmBoxItemColor: light-dark(#d0d0d0, #252525);
+  --mmDayColor: var(--layout-color-1);
+  --mmDayOtherColor: var(--layout-color-3);
+  --mmDayWeekColor: var(--layout-color-3);
+  --mmDayTodayColor: var(--layout-color-0);
+  --mmDayTodayBackground: light-dark(#e8e8e8, #1a1a1a);
+  --mmDaySelectedBackground: color-mix(in srgb, var(--selected-item-color) 20%, transparent);
+  --mmDaySelectedBorderColor: color-mix(in srgb, var(--selected-item-color) 60%, transparent);
+  --mmDaySelectedTodayBackground: color-mix(in srgb, var(--selected-item-color) 20%, transparent);
+  --mmDayBorderRadius: 4px;
+}
+
+/* Barre d'onglets façon Firefox : fond = frame, onglets arrondis flottants */
+:root:root {
+  --tabs-toolbar-background-color: transparent;
+  --tabs-toolbar-box-shadow: none;
+}
+
+:root:root #tabs-toolbar {
+  background-image: none;
+  padding-block: 0;
+  padding-inline: 4px;
+}
+
+:root:root .tabmail-tab {
+  margin-block: 4px;
+  margin-inline-end: 4px;
+  border-radius: 4px;
+
+  &[selected] {
+    box-shadow: 0 0 4px light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6));
+  }
+
+  & .tab-background {
+    border-radius: 4px;
+  }
+
+  & .tab-line {
+    display: none;
+  }
+
+  &:hover .tab-background:not([selected]) {
+    background-color: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  }
+}
+
+/* Menus et panneaux : variables définies sur les popups, pas sur :root */
+:root:root :is(menupopup, panel):not(.autoscroller) {
+  --panel-background-color: light-dark(#ffffff, #1a1a1a);
+  --panel-text-color: light-dark(#1a1a1a, #e6e6e6);
+  --panel-border-color: light-dark(#cccccc, #333333);
+  --panel-border-radius: 6px;
+}
